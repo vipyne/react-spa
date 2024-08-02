@@ -23,7 +23,7 @@ const ContactForm = () => {
 
   return (
   
-    <Stack>
+    <Stack sx={{ marginBottom: 4}}>
       <Typography variant="h4" gutterBottom>Contact Us</Typography>
       <form onSubmit={handleSubmit}>
         <Grid container rowSpacing={0} columnSpacing={{ md: 3 }}>

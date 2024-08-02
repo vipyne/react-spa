@@ -36,7 +36,7 @@ const theme = createTheme({
     },
     h4: {
       fontFamily: 'Teko, Arial, sans-serif',
-      color: 'teal',
+      color: '#b2dfdb',
     },
     h5: {
       fontFamily: 'Teko, Arial, sans-serif',
