@@ -3,7 +3,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import HeroBanner from "./components/HeroBanner";
 import Testimonials from "./components/Testimonials";
-import ContactForm from "./components/ContactForm";
+import Contact from "./components/Contact";
 import { deepOrange, teal } from "@mui/material/colors";
 import Container from "@mui/material/Container";
 
@@ -81,7 +81,7 @@ function App() {
       <Container >
         <HeroBanner />
         <Testimonials />
-        <ContactForm />
+        <Contact />
       </Container>
     </ThemeProvider>
   );
