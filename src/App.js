@@ -67,6 +67,18 @@ const theme = createTheme({
           '& .MuiFilledInput-input': {
             color: '#b2dfdb', // Text color inside the input
           },
+          '& .MuiOutlinedInput-root': {
+            backgroundColor: '#37474f', // Background color for the filled variant
+            '&:hover': {
+              backgroundColor: '#37474f', // Background color on hover
+            },
+          },
+          '& .MuiOutlinedInput-input': {
+            color: '#b2dfdb', // Text color inside the input
+          },
+          '& input:-internal-autofill-selected': {
+            backgroundColor: '#37474f !important',
+          },
         },
       },
     },

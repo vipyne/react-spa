@@ -20,7 +20,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://react-spa-ashy.vercel.app/sendEmail.php', formData, {
+      const response = await axios.post('https://react-spa-ashy.vercel.app/public/sendEmail.php', formData, {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       });
 
