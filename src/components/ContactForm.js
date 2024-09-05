@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { TextField, Button, Stack, Typography, Grid } from '@mui/material';
-import axios from 'axios';
-
+import React, { useState } from "react";
+import { TextField, Button, Stack, Typography, Grid } from "@mui/material";
+import axios from "axios";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -16,18 +16,20 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('sendEmail.php', formData)
-      .then(response => alert('Message sent successfully!'))
-      .catch(error => alert('Failed to send message.'));
+    axios
+      .post("sendEmail.php", formData)
+      .then((response) => alert("Message sent successfully!"))
+      .catch((error) => alert("Failed to send message."));
   };
 
   return (
-  
-    <Stack sx={{ marginBottom: 4}}>
-      <Typography variant="h4" gutterBottom>Contact Us</Typography>
+    <Stack sx={{ marginBottom: 4 }}>
+      <Typography variant="h4" gutterBottom>
+        Contact Us
+      </Typography>
       <form onSubmit={handleSubmit}>
         <Grid container rowSpacing={0} columnSpacing={{ md: 3 }}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={4}>
             <TextField
               label="Name"
               name="name"
@@ -35,10 +37,10 @@ const ContactForm = () => {
               onChange={handleChange}
               fullWidth
               margin="normal"
-              variant='filled'
+              variant="filled"
             />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={4}>
             <TextField
               label="Email"
               name="email"
@@ -46,7 +48,18 @@ const ContactForm = () => {
               onChange={handleChange}
               fullWidth
               margin="normal"
-              variant='filled'
+              variant="filled"
+            />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <TextField
+              label="Phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              fullWidth
+              margin="normal"
+              variant="filled"
             />
           </Grid>
         </Grid>
@@ -59,12 +72,13 @@ const ContactForm = () => {
           margin="normal"
           multiline
           rows={4}
-          variant='filled' 
+          variant="filled"
         />
-        <Button type="submit" variant="contained" color="primary">Send</Button>
+        <Button type="submit" variant="contained" color="primary">
+          Send
+        </Button>
       </form>
     </Stack>
-   
   );
 };
 
