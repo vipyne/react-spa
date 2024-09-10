@@ -1,6 +1,6 @@
 import React from "react";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 import HeroBanner from "./components/HeroBanner";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
@@ -12,72 +12,73 @@ const theme = createTheme({
     primary: deepOrange,
     secondary: teal,
     background: {
-      default: '#263238', // Slate gray
+      default: "#263238", // Slate gray
     },
     primary: {
-      light: '#e6ee9c',
-      main: '#bf360c',
-      dark: '#004d40',
-      contrastText: '#fbe9e7',
-    }
+      light: "#e6ee9c",
+      main: "#bf360c",
+      dark: "#004d40",
+      contrastText: "#fbe9e7",
+    },
   },
   typography: {
-    fontFamily: 'Raleway, Arial, sans-serif',
-    color: '#fbe9e7',
+    fontFamily: "Raleway, Arial, sans-serif",
+    color: "#fbe9e7",
     h1: {
-      fontFamily: 'Teko, Arial, sans-serif',
-      color: 'teal'
+      fontFamily: "Teko, Arial, sans-serif",
+      color: "#2196F3",
+      textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
     },
     h2: {
-      fontFamily: 'Teko, Arial, sans-serif',
+      fontFamily: "Teko, Arial, sans-serif",
     },
     h3: {
-      fontFamily: 'Teko, Arial, sans-serif',
+      fontFamily: "Teko, Arial, sans-serif",
     },
     h4: {
-      fontFamily: 'Teko, Arial, sans-serif',
-      color: '#b2dfdb',
+      fontFamily: "Teko, Arial, sans-serif",
+      color: "#b2dfdb",
     },
     h5: {
-      fontFamily: 'Teko, Arial, sans-serif',
+      fontFamily: "Teko, Arial, sans-serif",
     },
     h6: {
-      fontFamily: 'Teko, Arial, sans-serif',
+      fontFamily: "Teko, Arial, sans-serif",
     },
   },
   components: {
     MuiTextField: {
       styleOverrides: {
         root: {
-          '& .MuiFilledInput-root': {
-            backgroundColor: '#37474f', // Background color for the filled variant
-            '&:hover': {
-              backgroundColor: '#37474f', // Background color on hover
+          "& .MuiFilledInput-root": {
+            backgroundColor: "#37474f", // Background color for the filled variant
+            "&:hover": {
+              backgroundColor: "#37474f", // Background color on hover
             },
-            '&.Mui-focused': {
-              backgroundColor: '#263238', // Background color when focused
-            },
-          },
-          '& .MuiFormLabel-root': {
-            color: '#ffffff', // Label color
-            '&.Mui-focused': {
-              color: '#4db6ac', // Label color when focused
+            "&.Mui-focused": {
+              backgroundColor: "#263238", // Background color when focused
             },
           },
-          '& .MuiFilledInput-input': {
-            color: '#b2dfdb', // Text color inside the input
-          },
-          '& .MuiOutlinedInput-root': {
-            backgroundColor: '#37474f', // Background color for the filled variant
-            '&:hover': {
-              backgroundColor: '#37474f', // Background color on hover
+          "& .MuiFormLabel-root": {
+            color: "#ffffff", // Label color
+            "&.Mui-focused": {
+              color: "#4db6ac", // Label color when focused
             },
           },
-          '& .MuiOutlinedInput-input': {
-            color: '#b2dfdb', // Text color inside the input
+          "& .MuiFilledInput-input": {
+            color: "#b2dfdb", // Text color inside the input
           },
-          '& input:-internal-autofill-selected': {
-            backgroundColor: '#37474f !important',
+          "& .MuiOutlinedInput-root": {
+            backgroundColor: "#37474f", // Background color for the filled variant
+            "&:hover": {
+              backgroundColor: "#37474f", // Background color on hover
+            },
+          },
+          "& .MuiOutlinedInput-input": {
+            color: "#b2dfdb", // Text color inside the input
+          },
+          "& input:-internal-autofill-selected": {
+            backgroundColor: "#37474f !important",
           },
         },
       },
@@ -85,12 +86,11 @@ const theme = createTheme({
   },
 });
 
-
 function App() {
   return (
     <ThemeProvider theme={theme}>
-    <CssBaseline />
-      <Container >
+      <CssBaseline />
+      <Container>
         <HeroBanner />
         <Testimonials />
         <Contact />

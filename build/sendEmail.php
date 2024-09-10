@@ -16,6 +16,10 @@
 //         echo "Message sending failed.";
 //     }
 // }
+
+header("Access-Control-Allow-Origin: *"); // Adjust this for security in production
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
 ?>
 
 <?php
@@ -25,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['message'];
 
     // Email content
-    $to = 'your-email@example.com';
-    $subject = 'New Contact Form Submission';
+    $to = 'mushel@gmail.com';
+    $subject = 'New Contact Form Submission from info.mcurrier.com';
     $body = "Name: $name\nEmail: $email\nMessage: $message";
 
     // Send email
