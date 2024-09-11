@@ -6,6 +6,7 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import { deepOrange, teal } from "@mui/material/colors";
 import Container from "@mui/material/Container";
+import Footer from "./components/footer";
 
 const theme = createTheme({
   palette: {
@@ -44,6 +45,16 @@ const theme = createTheme({
     },
     h6: {
       fontFamily: "Teko, Arial, sans-serif",
+    },
+    body1: {
+      color: "#E3F2FD",
+    },
+    body3: {
+      color: "#546e7a",
+    },
+    body3R: {
+      textAlign: "right",
+      color: "#546e7a",
     },
   },
   components: {
@@ -94,6 +105,7 @@ function App() {
         <HeroBanner />
         <Testimonials />
         <Contact />
+        <Footer />
       </Container>
     </ThemeProvider>
   );

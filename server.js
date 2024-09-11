@@ -16,7 +16,7 @@ app.post("/send-email", (req, res) => {
 
   const emailContent = {
     to: "mcurrierdesigns@gmail.com",
-    from: "mushel@gmail.com",
+    from: "React.mcurrier.com",
     subject: "Contact Form Submission",
     text: `You have a new message from ${from_name} (${email}, ${telephone}): ${message}`,
     html: `<h1>Message from ${from_name}</h1><p>Email: ${email}</p><p>Phone: ${telephone}</p><p>Message: ${message}</p>`,

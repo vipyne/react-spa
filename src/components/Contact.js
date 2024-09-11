@@ -122,7 +122,11 @@ function Contact() {
           rows={4}
           required
         />
-        {status && <div className="alert alert-info text-center">{status}</div>}
+        {status && (
+          <div className="alert alert-info text-center">
+            <p>{status}</p>
+          </div>
+        )}
         <Button
           variant="contained"
           color="primary"
