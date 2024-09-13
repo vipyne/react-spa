@@ -17,7 +17,7 @@ function Contact() {
       message: formData.get("message"),
     };
 
-    fetch("http://localhost:5000/send-email", {
+    fetch("https://info.mcurrier.com/send-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -138,6 +138,23 @@ function Contact() {
           Send Message
         </Button>
       </Box>
+      <Typography>
+        <p>
+          <code>
+            {`
+         curl -X POST https://info.mcurrier.com/send-email \ `}
+          </code>
+        </p>
+        <p>
+          <code>{`-H "Content-Type: application/json" \ `} </code>
+        </p>
+        <p>
+          <code>
+            {`-d '{"from_name":"Test User","email":"test@example.com","telephone":"12345","message":"Hello!"}'
+        `}
+          </code>
+        </p>
+      </Typography>
     </>
   );
 }
