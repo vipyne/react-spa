@@ -17,7 +17,7 @@ function Contact() {
       message: formData.get("message"),
     };
 
-    fetch("https://info.mcurrier.com/send-email", {
+    fetch("https://react-contact-template.vercel.app/send-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
