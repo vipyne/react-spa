@@ -1,0 +1,12 @@
+# .cpanel.yml configuration file
+---
+deployment:
+  tasks:
+    - export DEPLOY_PATH=/home/claycreat1ons/public_html/react-build
+    - 'echo "Starting build process for React app..."'
+    - "npm install"
+    - "npm run build"
+    - 'echo "Moving build files to public_html"'
+    - "rm -rf ${DEPLOY_PATH}/*"
+    - "cp -r build/* ${DEPLOY_PATH}/"
+    - 'echo "Deployment completed successfully."'
