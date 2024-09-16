@@ -142,7 +142,7 @@ function Contact() {
         <p>
           <code>
             {`
-         curl -X POST https://info.mcurrier.com/send-email \ `}
+         curl -X POST https://yourdomain.com/send-email \ `}
           </code>
         </p>
         <p>
