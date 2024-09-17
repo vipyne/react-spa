@@ -4,7 +4,7 @@ deployment:
   tasks:
     # Define the path where the frontend and backend will be deployed
     - export APP_PATH=/home/claycreat1ons/public_html/react-build
-
+    - /bin/cp -r /home/claycreat1ons/repositories/react-spa2/* $DEPLOYPATH
     # Step 1: Install dependencies for both frontend and backend
     - 'echo "Installing dependencies..."'
     - "npm install"
