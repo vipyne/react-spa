@@ -6,19 +6,19 @@ deployment:
     - export APP_PATH=/home/claycreat1ons/public_html/react-build
 
     # Step 1: Copy the repository files to the deployment directory
-    - 'echo "Copying repository files..."'
+    - echo "Copying repository files..."
     - /bin/cp -r /home/claycreat1ons/repositories/react-spa3/* ${APP_PATH}
     # - cp -r /home/claycreat1ons/repositories/react-spa3/* ${APP_PATH}
 
     # Step 2: Change directory to the deployment directory (APP_PATH)
-    - 'echo "Changing to app directory..."'
-    - "cd ${APP_PATH}"
+    - echo "Changing to app directory..."
+    - cd ${APP_PATH}
 
     # Step 3: Install all dependencies for both frontend and backend
-    - 'echo "Installing dependencies..."'
-    - "cd ${APP_PATH} && npm install"
+    - echo "Installing dependencies..."
+    - cd ${APP_PATH} && npm install
 
     # Step 4: Run the Node.js backend (server.js) in the background
-    - 'echo "Starting backend server with node server.js..."'
-    - "/opt/cpanel/ea-nodejs16/bin/node ${APP_PATH}/server.js &"
-    - 'echo "Backend server started!"'
+    - echo "Starting backend server with node server.js..."
+    - /opt/cpanel/ea-nodejs16/bin/node ${APP_PATH}/server.js &
+    - echo "Backend server started!"
