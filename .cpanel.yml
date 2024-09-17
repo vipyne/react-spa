@@ -4,29 +4,21 @@ deployment:
   tasks:
     # Define the path where the frontend and backend will be deployed
     - export APP_PATH=/home/claycreat1ons/public_html/react-build
-    - /bin/cp -r /home/claycreat1ons/repositories/react-spa3/* $DEPLOYPATH
-    # Step 1: Install dependencies for both frontend and backend
+
+    # Step 1: Copy the repository files to the deployment directory
+    - 'echo "Copying repository files..."'
+    - /bin/cp -r /home/claycreat1ons/repositories/react-spa3/* ${APP_PATH}
+    # - cp -r /home/claycreat1ons/repositories/react-spa3/* ${APP_PATH}
+
+    # Step 2: Change directory to the deployment directory (APP_PATH)
+    - 'echo "Changing to app directory..."'
+    - "cd ${APP_PATH}"
+
+    # Step 3: Install all dependencies for both frontend and backend
     - 'echo "Installing dependencies..."'
-    - "npm install"
-
-    # Step 2: Build the React frontend
-    - 'echo "Building React frontend..."'
-    - "npm run build"
-
-    # Step 3: Move the built frontend files (from build/) to the same folder
-    - 'echo "Moving build files to app directory..."'
-    - "rm -rf ${APP_PATH}/*"
-    - "cp -r build/* ${APP_PATH}/"
-
-    # Step 4: Move backend files to the same folder (ignore node_modules and build)
-    - 'echo "Setting up backend..."'
-    - "cp -r ./* ${APP_PATH}/"
-    - "rm -rf ${APP_PATH}/node_modules ${APP_PATH}/build"
-
-    # Step 5: Install backend dependencies in the target folder
     - "cd ${APP_PATH} && npm install"
 
-    # Step 6: Restart the Node.js backend using Node.js Application Manager (cPanel)
-    - 'echo "Starting backend server.js..."'
-    - 'bash -c "/opt/cpanel/ea-nodejs16/bin/node ${APP_PATH}/server.js &"'
+    # Step 4: Run the Node.js backend (server.js) in the background
+    - 'echo "Starting backend server with node server.js..."'
+    - "/opt/cpanel/ea-nodejs16/bin/node ${APP_PATH}/server.js &"
     - 'echo "Backend server started!"'
