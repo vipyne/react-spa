@@ -4,8 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+you gotta commit to manually update on cpanel
+[yml documentation](https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-deployment/#deploy-an-entire-directory)
 In the project directory, you can run:
+
 ### `npm install`
+
 ### `npm start`
 
 Runs the app in the development mode.\
