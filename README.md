@@ -4,7 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+once you push your changes then
 you gotta commit to manually update on cpanel
+by git version control pull/deploy tab update from remote then deploy head commit
 [yml documentation](https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-deployment/#deploy-an-entire-directory)
 In the project directory, you can run:
 
